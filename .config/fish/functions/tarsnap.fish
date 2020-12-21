@@ -5,7 +5,7 @@ function tarsnap
         case archives
             command tarsnap --list-archives | sort
         case extract
-            command tarsnap -xf $argv[2..-1]
+            command tarsnap --fast-read -xf $argv[2..-1]
         case ls
             command tarsnap -tf $argv[2..-1]
         case '*'
